@@ -1,6 +1,6 @@
 # UltraCoins
 A simple Ultrakill mod that slightly buffs the marksman revolver variant.
-![uk1](https://github.com/GBRodrickTed/UltraCoins/assets/115361910/ba466e8f-0d45-459d-b352-236cbf41c4ba)
+![uk1](https://github.com/GBRodrickTed/UltraCoins/assets/115361910/1dd9a682-8afc-4240-ae0a-278fb1b0a516)
 I hope this mod provides a more fair and balanced Ultrakill experience overall.
 
-![uk2](https://github.com/GBRodrickTed/UltraCoins/assets/115361910/2fee06e1-d2e6-4278-bf0d-0deba365a4c5)
+![uk2](https://github.com/GBRodrickTed/UltraCoins/assets/115361910/1aa39312-dd66-497c-960d-64e39d2c7b31)
