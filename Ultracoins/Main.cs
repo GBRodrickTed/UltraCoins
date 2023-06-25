@@ -22,7 +22,6 @@ namespace Ultracoins
             [HarmonyPatch(typeof(Revolver), "ThrowCoin")]
             public static bool patch_ThrowCoin(ref Revolver __instance)
             {
-                //float spread = (float)Math.Sin(Convert.ToDouble(Time.time))*5f;
                 float spread = 5f;
                 if (__instance.punch == null || !__instance.punch.gameObject.activeInHierarchy)
                 {
