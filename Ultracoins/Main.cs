@@ -5,11 +5,23 @@ using UnityEngine;
 using UObj = UnityEngine.Object;
 using URand = UnityEngine.Random;
 
+using PluginConfig.API;
+using PluginConfig.API.Fields;
+
 namespace Ultracoins
 {
     [BepInPlugin("ironfarm.uk.uc", "UltraCoins!", "1.0.0")]
     public class UltraCoins : BaseUnityPlugin
     {
+        private PluginConfigurator config;
+        private static FloatField spreadFloat;
+
+        public void Awake()
+        {
+            config = PluginConfigurator.Create("UltraCoins!", "ironfarm.uk.uc");
+            spreadFloat = new FloatField(config.rootPanel, "Coin Spread", "field.spread", 5f, true);
+            
+        }
         public void Start()
         {
             Harmony harmony = new Harmony("ironfarm.uk.uc");
@@ -20,9 +32,9 @@ namespace Ultracoins
         {
             [HarmonyPrefix]
             [HarmonyPatch(typeof(Revolver), "ThrowCoin")]
-            public static bool patch_ThrowCoin(ref Revolver __instance)
+            public static bool patch_ThrowCoin(Revolver __instance)
             {
-                float spread = 5f;
+                float spread = spreadFloat.value;
                 if (__instance.punch == null || !__instance.punch.gameObject.activeInHierarchy)
                 {
                     __instance.punch = MonoSingleton<FistControl>.Instance.currentPunch;
@@ -56,6 +68,7 @@ namespace Ultracoins
                 if (MonoSingleton<InputManager>.Instance.InputSource.Fire2.IsPressed && __instance.gunVariation == 1)
                 {
                     __instance.ThrowCoin();
+                    Debug.Log(Time.deltaTime);
                 }
             }
         }
