@@ -39,7 +39,7 @@ namespace Ultracoins
                 {
                     __instance.punch = MonoSingleton<FistControl>.Instance.currentPunch;
                 }
-                if (__instance.punch)
+                if (__instance.punch && !MonoSingleton<InputManager>.Instance.InputSource.Punch.IsPressed)
                 {
                     __instance.punch.CoinFlip();
                 }
@@ -68,7 +68,8 @@ namespace Ultracoins
                 if (MonoSingleton<InputManager>.Instance.InputSource.Fire2.IsPressed && __instance.gunVariation == 1)
                 {
                     __instance.ThrowCoin();
-                    Debug.Log(Time.deltaTime);
+                    __instance.coinCharge = 399f;
+                    __instance.wc.rev1charge = 399f;
                 }
             }
         }
