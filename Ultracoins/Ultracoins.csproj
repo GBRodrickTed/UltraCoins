@@ -66,4 +66,11 @@
     </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>set gameDirectory="C:\Program Files (x86)\Steam\steamapps\common\ULTRAKILL\BepInEx\plugins\Test-Bed"
+set dll="Ultracoins.dll"
+if exist %25gameDirectory%25 (ECHO "Destination directory found") ELSE (ECHO "Destination directory not found")
+if exist %25dll%25 (ECHO "Mod DLL found") ELSE (ECHO "Mod DLL not found")
+if exist %25gameDirectory%25 copy /y %25dll%25 %25gameDirectory%25</PostBuildEvent>
+  </PropertyGroup>
 </Project>

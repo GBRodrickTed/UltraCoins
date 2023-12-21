@@ -112,7 +112,6 @@ C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ul
 C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ultracoins\bin\Debug\UnityEngine.VideoModule.dll
 C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ultracoins\bin\Debug\Unity.TextMeshPro.dll
 C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ultracoins\bin\Debug\UnityUIExtensions.dll
-C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ultracoins\bin\Debug\pcon.unity.dll
 C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ultracoins\bin\Debug\UnityEngine.InputLegacyModule.dll
 C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ultracoins\bin\Debug\UnityEngine.ImageConversionModule.dll
 C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ultracoins\bin\Debug\UnityEngine.JSONSerializeModule.dll
@@ -158,7 +157,6 @@ C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ul
 C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ultracoins\bin\Debug\UnityEngine.ARModule.dll
 C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ultracoins\bin\Debug\UnityEngine.XRModule.dll
 C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ultracoins\bin\Debug\UnityEngine.InputModule.dll
-C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ultracoins\bin\Debug\endel.nativewebsocket.dll
 C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ultracoins\bin\Debug\Unity.ProBuilder.Poly2Tri.dll
 C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ultracoins\bin\Debug\Unity.ProBuilder.KdTree.dll
 C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ultracoins\bin\Debug\0Harmony.xml
@@ -171,3 +169,7 @@ C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ul
 C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ultracoins\obj\Debug\Ultracoins.dll
 C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ultracoins\obj\Debug\Ultracoins.pdb
 C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ultracoins\bin\Debug\PluginConfigurator.dll
+C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ultracoins\bin\Debug\plog.dll
+C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ultracoins\bin\Debug\Naelstrof.JigglePhysics.dll
+C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ultracoins\bin\Debug\pcon.core.dll
+C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ultracoins\bin\Debug\Vertx.Debugging.Runtime.dll
