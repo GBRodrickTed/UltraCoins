@@ -35,22 +35,15 @@ namespace Ultracoins
             public static bool patch_ThrowCoin(Revolver __instance)
             {
                 float spread = 5f;
-                /*if (__instance.punch == null || !__instance.punch.gameObject.activeInHierarchy)
+                if (__instance.punch == null || !__instance.punch.gameObject.activeInHierarchy)
                 {
                     __instance.punch = MonoSingleton<FistControl>.Instance.currentPunch;
                 }
                 if (__instance.punch && !MonoSingleton<InputManager>.Instance.InputSource.Punch.IsPressed)
                 {
                     __instance.punch.CoinFlip();
-                }*/
-                if (__instance.punch == null || !__instance.punch.gameObject.activeInHierarchy)
-                {
-                    __instance.punch = MonoSingleton<FistControl>.Instance.currentPunch;
                 }
-                if (__instance.punch)
-                {
-                    __instance.punch.CoinFlip();
-                }
+                
                 GameObject gameObject = UObj.Instantiate<GameObject>(__instance.coin, __instance.camObj.transform.position + __instance.camObj.transform.up * -0.5f, __instance.camObj.transform.rotation);
                 gameObject.GetComponent<Coin>().sourceWeapon = __instance.gc.currentWeapon;
                 MonoSingleton<RumbleManager>.Instance.SetVibration(RumbleProperties.CoinToss);
