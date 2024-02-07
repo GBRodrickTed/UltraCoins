@@ -173,3 +173,5 @@ C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ul
 C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ultracoins\bin\Release\Naelstrof.JigglePhysics.dll
 C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ultracoins\bin\Release\pcon.core.dll
 C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ultracoins\bin\Release\Vertx.Debugging.Runtime.dll
+C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ultracoins\bin\Release\Unity.Mathematics.dll
+C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ultracoins\bin\Release\PluginConfiguratorComponents.dll
