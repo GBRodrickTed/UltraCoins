@@ -1,17 +1,17 @@
 ﻿using System;
-using BepInEx;
 using HarmonyLib;
+using BepInEx;
 using UnityEngine;
 using UObj = UnityEngine.Object;
 using URand = UnityEngine.Random;
-using PluginConfig.API;
-using PluginConfig.API.Fields;
-using PluginConfig.API.Decorators;
-using System.IO;
-using PluginConfig;
 using System.Threading;
+using System.IO;
 using static Ultracoins.UltraCoins;
 using System.Reflection;
+using PluginConfig;
+using PluginConfig.API.Fields;
+using PluginConfig.API;
+using System.Runtime.CompilerServices;
 
 namespace Ultracoins
 {
@@ -19,7 +19,7 @@ namespace Ultracoins
     {
         public const string Name = "UltraCoins!";
         public const string GUID = "ironfarm.uk.uc";
-        public const string Version = "1.0.4";
+        public const string Version = "1.0.6";
     }
     public static class ConfigManager
     {
@@ -27,6 +27,7 @@ namespace Ultracoins
         public static BoolField isEnabled;
         public static FloatField spread;
         public static FloatField tossDelay;
+        public static BoolField altSpam;
 
         public static void Setup()
         {
@@ -34,11 +35,13 @@ namespace Ultracoins
             isEnabled = new BoolField(config.rootPanel, "Enable Ultracoins", "field.isenabled", true, true);
             spread = new FloatField(config.rootPanel, "Coin Spread", "field.spread", 5f, true);
             tossDelay = new FloatField(config.rootPanel, "Toss Delay", "field.tossdelay", 0f, true);
+            altSpam = new BoolField(config.rootPanel, "Alt Instant Reload", "field.altspam", false, true);
 
             isEnabled.onValueChange += (e) =>
             {
                 spread.hidden = !e.value;
                 tossDelay.hidden = !e.value;
+                altSpam.hidden = !e.value;
             };
 
             tossDelay.onValueChange += (e) =>
@@ -61,6 +64,7 @@ namespace Ultracoins
     {
         public void Start()
         {
+            Debug.Log("Ding!!!!!!!!!!!!!!!!!!");//
             ConfigManager.Setup();
             Harmony harmony = new Harmony(PluginInfo.GUID);
             harmony.PatchAll();
@@ -153,6 +157,14 @@ namespace Ultracoins
             public static bool notevenfish(LeaderboardController __instance)
             {
                 return false;
+            }
+
+            [HarmonyPatch(typeof(Revolver), nameof(Revolver.InstaClick))]
+            [HarmonyPostfix]
+            public static void instaclicknochill(Revolver __instance)
+            {
+                __instance.gunReady = true;
+                if (ConfigManager.altSpam.value && ConfigManager.isEnabled.value) __instance.shootReady = true;
             }
         }
     }
