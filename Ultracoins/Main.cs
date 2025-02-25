@@ -8,10 +8,10 @@ using System.Threading;
 using System.IO;
 using static Ultracoins.UltraCoins;
 using System.Reflection;
-using PluginConfig;
+/*using PluginConfig;
 using PluginConfig.API.Fields;
 using PluginConfig.API;
-using System.Runtime.CompilerServices;
+using System.Runtime.CompilerServices;*/
 
 namespace Ultracoins
 {
@@ -21,7 +21,7 @@ namespace Ultracoins
         public const string GUID = "ironfarm.uk.uc";
         public const string Version = "1.0.6";
     }
-    public static class ConfigManager
+    /*public static class ConfigManager
     {
         private static PluginConfigurator config;
         public static BoolField isEnabled;
@@ -57,15 +57,18 @@ namespace Ultracoins
             ConfigManager.config.SetIconWithURL("file://" + iconFilePath);
         }
 
-    }
+    }*/
     [BepInPlugin(PluginInfo.GUID, PluginInfo.Name, PluginInfo.Version)]
-    [BepInDependency(PluginConfiguratorController.PLUGIN_GUID)]
     public class UltraCoins : BaseUnityPlugin
     {
+        public static float tossDelay = 0f;
+        public static float spread = 5f;
+        public static bool altSpam = true;
+        public static bool isEnabled = true;
         public void Start()
         {
             Debug.Log("Ding!!!!!!!!!!!!!!!!!!");//
-            ConfigManager.Setup();
+            //ConfigManager.Setup();
             Harmony harmony = new Harmony(PluginInfo.GUID);
             harmony.PatchAll();
         }
@@ -78,10 +81,10 @@ namespace Ultracoins
             [HarmonyPatch(typeof(Revolver), "ThrowCoin")]
             public static bool patch_ThrowCoin(Revolver __instance)
             {
-                if (ConfigManager.isEnabled.value)
+                if (isEnabled)
                 {
                     if (!coinReady) return false;
-                    float spread = ConfigManager.spread.value;
+                    float spread = UltraCoins.spread;
                     if (__instance.punch == null || !__instance.punch.gameObject.activeInHierarchy)
                     {
                         __instance.punch = MonoSingleton<FistControl>.Instance.currentPunch;
@@ -114,9 +117,9 @@ namespace Ultracoins
             [HarmonyPatch(typeof(Revolver), "Update")]
             public static void patch_CoinGatling(Revolver __instance)
             {
-                if (ConfigManager.isEnabled.value)
+                if (isEnabled)
                 {
-                    if (coinWait > ConfigManager.tossDelay.value)
+                    if (coinWait > tossDelay)
                     {
                         coinReady = true;
                     }
@@ -128,7 +131,7 @@ namespace Ultracoins
                     {
                         if (coinReady)
                         {
-                            coinWait -= ConfigManager.tossDelay.value;
+                            coinWait -= tossDelay;
                             __instance.ThrowCoin();
                             coinReady = false;
                         }
@@ -164,7 +167,8 @@ namespace Ultracoins
             public static void instaclicknochill(Revolver __instance)
             {
                 __instance.gunReady = true;
-                if (ConfigManager.altSpam.value && ConfigManager.isEnabled.value) __instance.shootReady = true;
+                if (altSpam && isEnabled) __instance.shootReady = true;
+                //(ConfigManager.altSpam.value && ConfigManager.isEnabled.value) __instance.shootReady = true;
             }
         }
     }

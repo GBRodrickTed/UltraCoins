@@ -108,7 +108,6 @@ C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ul
 C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ultracoins\bin\Release\Unity.InputSystem.dll
 C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ultracoins\bin\Release\UnityEngine.AIModule.dll
 C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ultracoins\bin\Release\UnityEngine.UIModule.dll
-C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ultracoins\bin\Release\NavMeshComponents.dll
 C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ultracoins\bin\Release\UnityEngine.VideoModule.dll
 C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ultracoins\bin\Release\Unity.TextMeshPro.dll
 C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ultracoins\bin\Release\UnityUIExtensions.dll
@@ -140,7 +139,6 @@ C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ul
 C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ultracoins\bin\Release\UnityEngine.GridModule.dll
 C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ultracoins\bin\Release\UnityEngine.SubsystemsModule.dll
 C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ultracoins\bin\Release\UnityEngine.LocalizationModule.dll
-C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ultracoins\bin\Release\UnityEngine.UNETModule.dll
 C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ultracoins\bin\Release\UnityEngine.UnityWebRequestAssetBundleModule.dll
 C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ultracoins\bin\Release\UnityEngine.UnityWebRequestWWWModule.dll
 C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ultracoins\bin\Release\UnityEngine.DirectorModule.dll
@@ -149,7 +147,6 @@ C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ul
 C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ultracoins\bin\Release\UnityEngine.SpriteMaskModule.dll
 C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ultracoins\bin\Release\UnityEngine.StreamingModule.dll
 C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ultracoins\bin\Release\UnityEngine.TerrainPhysicsModule.dll
-C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ultracoins\bin\Release\UnityEngine.TextCoreModule.dll
 C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ultracoins\bin\Release\UnityEngine.SpriteShapeModule.dll
 C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ultracoins\bin\Release\UnityEngine.UIElementsModule.dll
 C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ultracoins\bin\Release\UnityEngine.VehiclesModule.dll
@@ -175,7 +172,16 @@ C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ul
 C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ultracoins\bin\Release\Unity.Mathematics.dll
 C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ultracoins\bin\Release\Unity.Burst.dll
 C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ultracoins\bin\Release\plog.unity.dll
-C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ultracoins\bin\Release\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ultracoins\bin\Release\Unity.Burst.Unsafe.dll
-C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ultracoins\bin\Release\PluginConfigurator.dll
-C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ultracoins\bin\Release\PluginConfiguratorComponents.dll
+C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ultracoins\bin\Release\netstandard.dll
+C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ultracoins\bin\Release\TriInspector.dll
+C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ultracoins\bin\Release\Unity.AI.Navigation.dll
+C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ultracoins\bin\Release\UnityEngine.UnityCurlModule.dll
+C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ultracoins\bin\Release\UnityEngine.ContentLoadModule.dll
+C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ultracoins\bin\Release\UnityEngine.PropertiesModule.dll
+C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ultracoins\bin\Release\UnityEngine.TLSModule.dll
+C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ultracoins\bin\Release\UnityEngine.UnityAnalyticsCommonModule.dll
+C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ultracoins\bin\Release\UnityEngine.NVIDIAModule.dll
+C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ultracoins\bin\Release\UnityEngine.VirtualTexturingModule.dll
+C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ultracoins\bin\Release\UnityEngine.TextCoreFontEngineModule.dll
+C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ultracoins\bin\Release\UnityEngine.TextCoreTextEngineModule.dll
