@@ -8,10 +8,11 @@ using System.Threading;
 using System.IO;
 using static Ultracoins.UltraCoins;
 using System.Reflection;
-/*using PluginConfig;
+using PluginConfig;
 using PluginConfig.API.Fields;
 using PluginConfig.API;
-using System.Runtime.CompilerServices;*/
+using System.Runtime.CompilerServices;
+using PluginConfig.API.Decorators;
 
 namespace Ultracoins
 {
@@ -19,13 +20,14 @@ namespace Ultracoins
     {
         public const string Name = "UltraCoins!";
         public const string GUID = "ironfarm.uk.uc";
-        public const string Version = "1.0.6";
+        public const string Version = "1.0.8";
     }
-    /*public static class ConfigManager
+    public static class ConfigManager
     {
         private static PluginConfigurator config;
         public static BoolField isEnabled;
         public static FloatField spread;
+        public static ConfigHeader tossNeg;
         public static FloatField tossDelay;
         public static BoolField altSpam;
 
@@ -34,7 +36,8 @@ namespace Ultracoins
             config = PluginConfigurator.Create(PluginInfo.Name, PluginInfo.GUID);
             isEnabled = new BoolField(config.rootPanel, "Enable Ultracoins", "field.isenabled", true, true);
             spread = new FloatField(config.rootPanel, "Coin Spread", "field.spread", 5f, true);
-            tossDelay = new FloatField(config.rootPanel, "Toss Delay", "field.tossdelay", 0f, true);
+            tossNeg = new ConfigHeader(config.rootPanel, "<color=red>-1 = two coins per frame, -2 = three coins, etc.</color>", 15);
+            tossDelay = new FloatField(config.rootPanel, "Toss Delay", "field.tossdelay", 0f, -100f, 100000f, true, true);
             altSpam = new BoolField(config.rootPanel, "Alt Instant Reload", "field.altspam", false, true);
 
             isEnabled.onValueChange += (e) =>
@@ -42,14 +45,29 @@ namespace Ultracoins
                 spread.hidden = !e.value;
                 tossDelay.hidden = !e.value;
                 altSpam.hidden = !e.value;
+                UltraCoins.isEnabled = e.value;
+            };
+
+            spread.onValueChange += (e) =>
+            {
+                UltraCoins.spread = e.value;
+            };
+
+            altSpam.onValueChange += (e) =>
+            {
+                UltraCoins.altSpam = e.value;
             };
 
             tossDelay.onValueChange += (e) =>
             {
+                UltraCoins.tossDelay = e.value;
                 Revolver_Patch.coinReady = true;
+                tossNeg.hidden = !(e.value < 0);
             };
 
             tossDelay.TriggerValueChangeEvent();
+            altSpam.TriggerValueChangeEvent();
+            spread.TriggerValueChangeEvent();
             isEnabled.TriggerValueChangeEvent();
 
             string workingDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
@@ -57,7 +75,7 @@ namespace Ultracoins
             ConfigManager.config.SetIconWithURL("file://" + iconFilePath);
         }
 
-    }*/
+    }
     [BepInPlugin(PluginInfo.GUID, PluginInfo.Name, PluginInfo.Version)]
     public class UltraCoins : BaseUnityPlugin
     {
@@ -65,10 +83,11 @@ namespace Ultracoins
         public static float spread = 5f;
         public static bool altSpam = true;
         public static bool isEnabled = true;
+        static float coinsPerFrameCounter = 0;
         public void Start()
         {
             Debug.Log("Ding!!!!!!!!!!!!!!!!!!");//
-            //ConfigManager.Setup();
+            ConfigManager.Setup();
             Harmony harmony = new Harmony(PluginInfo.GUID);
             harmony.PatchAll();
         }
@@ -131,8 +150,21 @@ namespace Ultracoins
                     {
                         if (coinReady)
                         {
-                            coinWait -= tossDelay;
-                            __instance.ThrowCoin();
+                            if (tossDelay < 0)
+                            {
+                                coinsPerFrameCounter += ((tossDelay * -1f) + 1f);
+                                //Debug.LogError(coinsPerFrame);
+                                while (coinsPerFrameCounter > 1f)
+                                {
+                                    coinsPerFrameCounter -= 1f;
+                                    __instance.ThrowCoin();
+                                }
+                            } else
+                            {
+                                coinWait -= tossDelay;
+                                __instance.ThrowCoin();
+                            }
+                            
                             coinReady = false;
                         }
                         __instance.coinCharge = 399f;

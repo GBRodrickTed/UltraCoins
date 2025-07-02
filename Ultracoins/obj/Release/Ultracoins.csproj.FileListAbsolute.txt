@@ -185,3 +185,5 @@ C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ul
 C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ultracoins\bin\Release\UnityEngine.VirtualTexturingModule.dll
 C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ultracoins\bin\Release\UnityEngine.TextCoreFontEngineModule.dll
 C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ultracoins\bin\Release\UnityEngine.TextCoreTextEngineModule.dll
+C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ultracoins\bin\Release\PluginConfigurator.dll
+C:\Users\theca\Documents\Coding Stuff\CVS Deluxe\VS\United Kingdom\Ultracoins\Ultracoins\bin\Release\PluginConfiguratorComponents.dll
